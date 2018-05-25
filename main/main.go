@@ -5,6 +5,7 @@ import (
 	"go-web1/controller"
 	"database/sql"
 	"fmt"
+
 )
 
 var DB, errglobal = sql.Open("mysql", "root:@tcp(localhost:3306)/webapp")
