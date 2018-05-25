@@ -3,11 +3,17 @@ package main
 import (
 	"net/http"
 	"go-web1/controller"
+	"database/sql"
+	"fmt"
 )
 
-func main() {
-	registerHandler()
+var DB, errglobal = sql.Open("mysql", "root:@tcp(localhost:3306)/webapp")
 
+func main() {
+	if errglobal != nil {
+		fmt.Println(errglobal.Error())
+	}
+	registerHandler()
 	http.ListenAndServe(":8070", nil)
 }
 
