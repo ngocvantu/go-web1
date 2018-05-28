@@ -1,17 +1,19 @@
 package controller
 
 import (
-	"net/http"
-	"html/template"
 	"fmt"
+	"html/template"
+	"net/http"
+	"time"
 )
 
+var t2, er2 = template.ParseFiles("web-content/pages/index.html")
 
-
-func Index(w http.ResponseWriter, r *http.Request){
-	var t,er = template.ParseFiles("web-content/pages/index.html")
-	if er != nil {
-		fmt.Println(er.Error())
+func Index(w http.ResponseWriter, r *http.Request) {
+	start := time.Now()
+	if er2 != nil {
+		fmt.Println(er2.Error())
 	}
-	t.Execute(w,nil)
+	t2.Execute(w, nil)
+	fmt.Println("index take:", time.Since(start))
 }

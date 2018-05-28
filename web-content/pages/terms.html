@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Terms - view and add term</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/web-content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -74,21 +74,16 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
 
                         <li>
-                            <a href="terms.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                            <a href="#"><i class="fa fa-table fa-fw"></i> Tables</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                            <a href="#"><i class="fa fa-edit fa-fw"></i> Forms</a>
                         </li>
 
-
-                        <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-
-                        </li>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -99,23 +94,35 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Tables</h1>
+                    <h2 class="page-header">Terms</h2>
                 </div>
+                <form action="/terms/" method="POST" >
                 <div class="form-group">
                     <div class="form-row">
-                        <div class="col-md-6">
-                            <label for="exampleInputName">First name</label>
-                            <input class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter first name" type="text">
+                        <div class="col-md-2">
+                            <input class="form-control" autofocus name="key-jp" id="key-jp" aria-describedby="nameHelp" placeholder="Key Eng" type="text">
                         </div>
-                        <div class="col-md-6">
-                            <label for="exampleInputLastName">Last name</label>
-                            <input class="form-control" id="exampleInputLastName" aria-describedby="nameHelp" placeholder="Enter last name" type="text">
+                        <div class="col-md-2">
+                            <input class="form-control" name="key-en" id="key-en" aria-describedby="nameHelp" placeholder="Key Eng" type="text">
+                        </div>
+                        <div class="col-md-2">
+                            <input class="form-control" name="val-en" id="val-en" aria-describedby="nameHelp" placeholder="Value Eng" type="text">
+                        </div>
+                        <div class="col-md-2">
+                            <input class="form-control" name="val-jp" id="val-jp" aria-describedby="nameHelp" placeholder="Value JP" type="text">
+                        </div>
+                        <div class="col-md-2">
+                            <input class="form-control" name="val-vi" id="val-vi" aria-describedby="nameHelp" placeholder="Value VI" type="text">
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary">Add terms</button>
                         </div>
                     </div>
                 </div>
+                </form>
             </div>
             <!-- /.row -->
-            <div class="row">
+            <div class="row" style="margin-top: 5px">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <!-- /.panel-heading -->
