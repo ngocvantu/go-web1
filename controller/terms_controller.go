@@ -44,7 +44,7 @@ func Terms(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("add term take:", time.Since(start))
 	} else {
 		start := time.Now()
-		createTermsTable()
+		//createTermsTable()
 		//getTerms()
 		if er != nil {
 			fmt.Println(er.Error())
